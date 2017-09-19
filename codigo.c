@@ -41,19 +41,19 @@ void lermatriz(double **M, int dim, FILE*leitura)
 
 }
 
-int main()
+int main(int argc, char *argv[])
 {
 	int i, j, dim;
 	double **M, a;
 	FILE *leitura;
 
-	leitura = fopen("matriz.dat","r");
+	leitura = fopen(argv[1],"r");
 	i = fscanf(leitura, "%d", &dim);
 	M = malloc(dim*sizeof(double*));
 
 	lermatriz(M,dim,leitura);
 
-	printf("Matriz digitada: \n");
+	printf("matriz digitada: \n");
 	imprime(M,dim);
 }
 
