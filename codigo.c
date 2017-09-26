@@ -67,6 +67,7 @@ void decomposicaoLU(double **M, int dim)
          	if(i==j)
      		{	U[i][j] = 1.0;
      	  	 	i++;
+			numop++;
      		}
          	U[0][j] = M[0][j]/L[0][0];
          	numop++;
@@ -120,6 +121,7 @@ int main(int argc, char *argv[])
 	imprime(M,dim);
 
 	decomposicaoLU(M, dim);
+
 }
 
 
