@@ -88,7 +88,7 @@ void decomposicaoLU(double **M, int dim)
      	  	
      	  	for(j=i+1;j<dim-1;j++)
      	 	{     
-     	      		for(k=0;k<i-1;i++)
+     	      		for(k=0;k<i-1;k++)
      	      		{	soma2 = soma2 + U[k][j]*L[i][k]; 	
      	      			numop++;	
      	      		}
